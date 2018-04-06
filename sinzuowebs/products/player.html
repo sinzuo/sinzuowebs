@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from www.qiniu.com/products/player by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Apr 2018 00:57:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <script type="text/javascript">var qns = window._qns || []; window._qns=qns;qns.push(["setStartLoadTime",new Date().getTime()]);qns.push(["setAccountID","591ead7b54630dd7aed533df"]);</script>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="kJC0+ABnxgjAKtlMMZVrRnabe/Y2Tol5fqf69CX9AJdDACEdYZgOH6TPL5GR5SVeUG3VTY6p2BCShWXLoby8gA==" />
+    <meta charset="utf-8">
+    <meta name="keywords" content="播放器SDK，七牛播放器，android播放器sdk，ios播放器SDK，视频播放SDK，PLWinPlayer，PLDroidPlayer，PLPlayerKit，web播放器SDK" />
+    <meta name="description" content="七牛云播放器是一款全自研内核的跨平台多媒体播放器，支持 Android、iOS、Windows 等多种视频格式及多媒体协议，拥有丰富的功能和优异的性能，可高度定制化和二次开发。">
+    <meta name="baidu-site-verification" content="otBvF33R0a" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>播放器SDK_视频播放SDK-七牛云播放器</title>
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+
+    <link rel="stylesheet" media="all" href="../assets/application-b8831c0d151f8e003b785d80784434512b194427cfc9668cd8d55449d6b622a9.css" />
+    <script src="../assets/application-1ab7b85b46891af599dd44724b8cdb75c42ab30eba07299a9d2623d7612fd4d7.js"></script>
+  </head>
+
+  <body class="welcome-page welcome-page-player">
+    <!--[if lt IE 10]>
+      <div class="browsehappy alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        您正在使用 <strong>旧浏览器</strong> . 为了更好的体验，请 <a href="http://browsehappy.com/" target="_blank">更新</a> 您的浏览器.
+      </div>
+    <![endif]-->
+
+    <nav class="navbar navbar-default" id="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html"><img width="100" src="../assets/logo-white-18da5fcb02f4aa87dacbf4451a7356b6179baebc96ae77cf24f607c98d12d100.png" alt="Logo white" /></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-nav-mobile">
+            <li class="dropdown" id="spaces-dropdown">
+              <a href="#" class="dropdown-toggle dropdown-toggle-mobile" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品</a>
+
+              <ul class="dropdown-menu services-menu">
+                  <li class="menu-title hidden-xs">基础服务</li>
+                    <li class="service">                      <a href="kodo.html">                        <h4 class="kodo">对象存储</h4>                        <p class="hidden-xs">高可用、易扩展、低成本、一站式</p></a></li>                    <li class="service">                      <a href="fusion.html">                        <h4 class="fusion">融合 CDN</h4>                        <p class="hidden-xs">融合优质节点、可监控、智能调度的内容分发服务</p></a></li>                    <li class="service">                      <a href="kirk.html">                        <h4 class="kirk">容器云 <small>(即将上线)</small></h4>                        <p class="hidden-xs">面向微服务架构的企业级容器管理平台</p></a></li>                  <li class="menu-title hidden-xs">数据•智能</li>
+                    <li class="service">                      <a href="atlab.html">                        <h4 class="atlab">深度学习平台</h4>                        <p class="hidden-xs">针对图片视频的一站式数据集中处理、模型训练平台</p></a></li>                    <li class="service">                      <a href="pandora.html">                        <h4 class="pandora">大数据</h4>                        <p class="hidden-xs">简单、高效、开放</p></a></li>                    <li class="service">                      <a href="dora.html">                        <h4 class="dora">智能多媒体 API</h4>                        <p class="hidden-xs">针对海量图片视频提供鉴黄鉴暴、人脸技术、物体识别等服务</p></a></li>                  <li class="menu-title hidden-xs">视频服务</li>
+                    <li class="service">                      <a href="pili.html">                        <h4 class="pili">直播云</h4>                        <p class="hidden-xs">提供全球化实时流服务和端到端直播场景解决方案</p></a></li>              </ul>
+            </li>
+
+            <li class="dropdown" id="solution-dropdown">
+              <a href="#" class="dropdown-toggle dropdown-toggle-mobile" id="solution-dropdown-title" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">解决方案</a>
+
+              <ul class="dropdown-menu solutions-menu">
+                  <li class="solution">                    <a href="plsv.html">                      <h4 class="plsv menu-title">短视频解决方案</h4>                      <p class="hidden-xs">集成完整云端能力及卓越采集端、播放端功能的一站式短视频解决方案</p></a></li>                  <li class="solution">                    <a href="player.html">                      <h4 class="player menu-title">播放器解决方案</h4>                      <p class="hidden-xs">全自研内核的跨平台多媒体播放器，支持多种视频格式及流媒体协议</p></a></li>                  <li class="solution">                    <a href="newmedia.html">                      <h4 class="newmedia menu-title">新媒体解决方案</h4>                      <p class="hidden-xs">满足传统媒体向融合媒体转型需求，构建全媒体资源管理系统</p></a></li>
+                  <li class="solution">                    <a href="../solutions.html#qualityctrl">                      <h4 class="qualityctrl menu-title">应用质量监控解决方案</h4>                      <p class="hidden-xs">满足移动及视频应用性能管理需求，可定制化的质量监控平台</p></a></li>                  <li class="solution">                    <a href="../solutions.html#privatization">                      <h4 class="privatization menu-title">私有云存储解决方案</h4>                      <p class="hidden-xs">可定制化的数百 PB 级别、高可靠、强安全的存储系统</p></a></li>                  <li class="solution">                    <a href="../solutions.html#data">                      <h4 class="data menu-title">非结构化数据管理解决方案</h4>                      <p class="hidden-xs">提供大批量文件打包上传、文档检索、多媒体数据处理等服务</p></a></li>                  <li class="solution">                    <a href="../solutions.html#security">                      <h4 class="security menu-title">安防解决方案</h4>                      <p class="hidden-xs">灵活部署，满足不同安防场景互联网远程监控需求</p></a></li>                  <li class="solution">                    <a href="../solutions.html#intelligence">                      <h4 class="intelligence menu-title">智能硬件与物联网解决方案</h4>                      <p class="hidden-xs">满足智能硬件厂商各应用场景下云端计算需求</p></a></li>                  <li class="solution">                    <a href="../solutions.html#album">                      <h4 class="album menu-title">智能云相册解决方案</h4>                      <p class="hidden-xs">满足各场景照片智能分类需求，提供与手机ROM深度定制服务</p></a></li>                  <li class="solution">                    <a href="../solutions.html#internet">                      <h4 class="internet menu-title">互联网与移动互联网解决方案</h4>                      <p class="hidden-xs">为互联网初创企业量身定制，一站式云计算服务平台</p></a></li>
+                <li class="solution ">
+                  <a href="pili/livequiz.html">                    <h4 class="quiz menu-title">直播竞答解决方案</h4>
+                    <p class="hidden-xs">七牛云直播竞答解决方案是专为直播竞答产品打造的全球化直播流服务和端到端场景解决方案</p>
+</a>                </li>
+              </ul>
+            </li>
+            <li class=""><a href="../prices.html">价格</a></li>
+            <li class="dropdown" id="events-dropdown">
+              <a href="#" class="dropdown-toggle dropdown-toggle-mobile" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">活动与支持</a>
+
+              <ul class="dropdown-menu events-menu">
+                  <li class="menu-title hidden-xs">热门活动</li>
+                    <li class="events">                      <a href="../niudays.html">                        <h4 class="niuday">NIUDAY 小牛汇共享日</h4>                        <p class="hidden-xs"></p></a></li>                    <li class="events">                      <a href="../events/arch.html">                        <h4 class="arch">架构师实践日</h4>                        <p class="hidden-xs"></p></a></li>                    <li class="events">                      <a href="../events/ecugcon.html">                        <h4 class="ecug">ECUG</h4>                        <p class="hidden-xs"></p></a></li>                  <li class="menu-title hidden-xs">云扶持</li>
+                    <li class="events">                      <a href="../goglobal.html">                        <h4 class="goglobal">出海创业扶持计划</h4>                        <p class="hidden-xs"></p></a></li>                    <li class="events">                      <a href="../alaccelerator.html">                        <h4 class="alaccelerator">AI 创新扶持计划</h4>                        <p class="hidden-xs"></p></a></li>                  <li class="menu-title hidden-xs">云合作</li>
+                    <li class="events">                      <a href="../partner.html">                        <h4 class="partners">合作伙伴发展计划</h4>                        <p class="hidden-xs"></p></a></li>              </ul>
+            </li>
+            <li class="company-more"><a href="../company.html">关于我们</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right navbar-nav-mobile">
+            <li class="manage-control"><a target="_blank" href="https://portal.qiniu.com/">管理控制台</a></li>
+            <li class="developer-center"><a target="_blank" href="https://developer.qiniu.com/">开发者中心</a></li>
+            <li class="presentation-more select-unit" id="more-dropdown">
+              <a class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">更多</a>
+              <ul class="presentation-menu dropdown-menu dropdown-menu-right m-0 p-0">
+                <li class="manage-control"><a target="_blank" href="https://portal.qiniu.com/">管理控制台</a></li>
+                <li class="developer-center"><a target="_blank" href="https://developer.qiniu.com/">开发者中心</a></li>
+                <li class="company-more"><a href="../company.html">关于我们</a></li>
+              </ul>
+            </li>
+            <li class="select-unit" id="language-dropdown">
+              <a class="language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span class="line "></span>
+                <span class="current">中文站</span> &nbsp;
+                <span class="glyphicon glyphicon-chevron-down"></span>
+              </a>
+              <ul class="language-menu dropdown-menu dropdown-menu-right m-0 p-0">
+                <li val="zh">
+                  <a href="player.html">中文站</a>
+                </li>
+                <li val="en">
+                  <a href="../en/products/player.html">International-English</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown hidden userinfo " id="user-dropdown">
+              <a href="#" class="dropdown-toggle dropdown-toggle-mobile user-email" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+              <ul class="dropdown-menu user-menu">
+                <li><a href="https://sso.qiniu.com/signout" class="text-sub">退出当前帐号</a></li>
+              </ul>
+            </li>
+            <li class="need-signin ">
+              <div class="actions">
+                <a href="https://sso.qiniu.com?client_id=bg0o9wibvw0qtmmf4nnnimetskulf5xy67pcymzmkw1otjbqepcr6drghyifj1gh&amp;redirect_url=https://www.qiniu.com" class="btn btn-hollow">登录</a>
+                <a target="_blank" href="https://portal.qiniu.com/signup/choice" class="btn btn-primary hidden-xs">注册有礼</a>
+                <a target="_blank" href="https://portal.qiniu.com/signup?type=1" class="btn btn-primary visible-xs-inline">注册有礼</a>
+              </div>
+            </li>
+
+            <li class="d-none">
+              <div class="actions">
+                <a href="#" class="btn btn-hollow hidden-xs" data-toggle="modal" data-target="#feedback-modal">Contact Us</a>
+              </div>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="jumbotron hero hero-player">
+  <div class="container">
+    <div class="middle-container">
+      <div class="row">
+        <div class="col-xs-8">
+          <h2>七牛云播放器</h2>
+          <p>七牛云播放器是一款全自研内核的跨平台多媒体播放器，支持多种视频格式及流媒体协议。</p>
+          <div class="actions">
+            <a class="btn btn-lg btn-hollow m-r m-b-xs" target="_blank" href="https://developer.qiniu.com/pili/sdk/1210/the-android-client-sdk">Android SDK</a>            <a class="btn btn-lg btn-hollow m-r m-b-xs" target="_blank" href="https://developer.qiniu.com/pili/sdk/1211/ios-playback-end-the-sdk">iOS SDK</a>            <a class="btn btn-lg btn-hollow m-b-xs" target="_blank" href="https://developer.qiniu.com/pili/sdk/4164/windows-player-sdk">Windows SDK</a>          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="right-mask-banner">
+            <img alt="播放器" width="100%" src="../assets/player/banner-right-d44d7c674606255aae5234eb408887b53265ad88acf6a5c773e57939278f6840.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="features features-suspension">
+  <div class="container">
+    <div class="suspension">
+      <div class="row">
+        <div class="col-sm-3 col-xs-6 col-clear">
+          <a href="javascript:;" class="suspension-item">
+            <i class="icon first-icon"></i>
+            <div class="desc">
+              <p>首开</p>
+              <p>首开 200 ms,低延迟</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-3 col-xs-6 col-clear">
+          <a href="javascript:;" class="suspension-item">
+            <i class="icon package-icon"></i>
+            <div class="desc">
+              <p>包体</p>
+              <p>640 KB</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-3 col-xs-6 col-clear">
+          <a href="javascript:;" class="suspension-item">
+            <i class="icon crosite-icon"></i>
+            <div class="desc">
+              <p>跨平台</p>
+              <p>Android / iOS / Windows</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-3 col-xs-6 col-clear">
+          <a href="javascript:;" class="suspension-item">
+            <i class="icon stable-icon"></i>
+            <div class="desc">
+              <p>稳定性</p>
+              <p>千万日活</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="features features-player features-suspension-next">
+  <div class="container">
+    <div class="intro">
+      <h2 class="title">丰富的特色功能</h2>
+    </div>
+    <div class="player-bg">
+      <div class="desc">
+        <div class="pull-left desc-unit">
+          <h3>DRM 版权保护</h3>
+          <p>防止数字媒体的非法复制</p>
+        </div>
+        <div class="pull-right desc-unit text-right">
+          <h3>智能调整播放策略</h3>
+          <p>有效降低播放延迟和卡顿</p>
+        </div>
+      </div>
+      <div class="bg-img"><i class="player-img"></i></div>
+      <div class="desc">
+        <div class="pull-left desc-unit">
+          <h3>大数据分析</h3>
+          <p>性能数据实时监测分析、告警，优化终端用户体验</p>
+        </div>
+        <div class="pull-right desc-unit text-right">
+          <h3>HLS 自适应码率</h3>
+          <p>轻松应对终端用户复杂网络环境</p>
+        </div>
+      </div>
+      <div class="text-center m">
+        <a target="_blank" class="" href="https://developer.qiniu.com/pili/sdk/4262/player-sdk-introduction-and-demo-download">更多功能介绍和 Demo 体验 &gt;&gt;</a>      </div>
+    </div>
+  </div>
+</div>
+
+<div class="features features-player">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 col-xs-6">
+        <div class="thumbnail">
+          <img alt="接入更简单" width="100" src="../assets/player/jieluojiandan-5893352f92f3f3ac065071c0b01f9f1dfd415d20ef0602df0697a8d7dda7bacc.png" />
+          <div class="caption">
+            <h4>接入更简单</h4>
+            <p>接口清晰，文档健全，一天即可完成播放器 SDK 的接入。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <div class="thumbnail">
+          <img alt="方便二次开发" width="100" src="../assets/player/ercikaifa-d6c474477bdc21eeb9d7fe9bf78b5800c29f6a492eef1e6abca210132fb7ba56.png" />
+          <div class="caption">
+            <h4>方便二次开发</h4>
+            <p>丰富的信令和数据回调，可灵活进行二次开发。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <div class="thumbnail">
+          <img alt="顾问式咨询服务" width="100" src="../assets/player/guwenzixun-5832849a773427f63649bba914373033182e8262ec79ecb9aad387e2f5ecd890.png" />
+          <div class="caption">
+            <h4>顾问式咨询服务</h4>
+            <p>音视频专家倾力打造，提供深度咨询服务，定制高性价比解决方案。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <div class="thumbnail">
+          <img alt="丰富的产品生态" width="100" src="../assets/player/chanpinshengtai-41405a9ea9e9070827dfa8a05ef874b43d065a9d203295f95ddd210986313dca.png" />
+          <div class="caption">
+            <h4>丰富的产品生态</h4>
+            <p>可自由选择七牛云存储、融合 CDN、智能多媒体 API、大数据等产品。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="features features-less">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <h2 class="title">客户案例</h2>
+      </div>
+      <div class="col-sm-10">
+        <div id="cases-slider" class="conveyor slick-slider draggable">
+          <div><img class="case" alt="blued" title="blued" src="../assets/plsv/client-blued-cb206dd84687b3dbd607781d9f1da5921f0eb799817f6ea5881b16f0ddec8f98.jpg" /></div>
+          <div><img class="case" alt="shiguangwang" title="shiguangwang" src="../assets/player/shiguangwang-ae56a4c44d8bac7fd416305e78fba3996d13df85e35fd7d4dcd6d2b8cfabd7f2.png" /></div>
+          <div><img class="case" alt="chudianxinwang" title="chudianxinwang" src="../assets/player/chudianxinwang-6853761be5d69fae4a4630121ec44249c8cbab2bd9a208676a1c6a2e63c302f2.png" /></div>
+          <div><img class="case" alt="shouyinzhibo" title="shouyinzhibo" src="../assets/player/shouyinzhibo-7d6d2e600871fc273d05d02d17efa80a448537c08d0de5965bd8d1799e63e086.png" /></div>
+          <div><img class="case" alt="chuanyinkonggu" title="chuanyinkonggu" src="../assets/player/chuanyinkonggu-5b6404f9d236615ab91f2ddbfa680ed81d0877ded16c688f5ffc3e36147e4bed.png" /></div>
+          <div><img class="case" alt="xingqiubuluo" title="xingqiubuluo" src="../assets/player/xingqiubuluo-d35651e95b42d23be66601dbfe2e4b4cfec02bf79f9319736b237317f8a0a7e5.png" /></div>
+          <div><img class="case" alt="upzhibo" title="upzhibo" src="../assets/player/upzhibo-f5ac740f51707d9b3511484b52fcbdc08ffb70f0b8204ad02ef5d2f0d58f83cb.png" /></div>
+          <div><img class="case" alt="maimai" title="maimai" src="../assets/player/maimai-8a080ae6924026cb29dee9bd548da5e5e2168b8b7038d288106b51980c4a0b32.png" /></div>
+          <div><img class="case" alt="qichengzhijia" title="qichengzhijia" src="../assets/player/qichengzhijia-289dc52a9b26ef115a0210569baf38560e5a3125585bb7e02a8dcb0a23210a88.png" /></div>
+          <div><img class="case" alt="xiaohongshu" title="xiaohongshu" src="../assets/player/xiaohongshu-2fdc900625846feea54e6383fc26fe0e9b22c0b869c5eb0972e7219eb229c69a.jpg" /></div>
+          <div><img class="case" alt="vipkid" title="vipkid" src="../assets/player/vipkid-106b88a43acb0e2872205f867f53de5f4644cf0690af88410aceeb21fe3d57ad.jpg" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="features features-less features-cases">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <h2 class="title">产品相关</h2>
+      </div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-sm-3 col-xs-4">
+            <h4>SDK及工具</h4>
+            <ul class="links-list">
+              <li><a target="_blank" href="https://developer.qiniu.com/pili/sdk/1210/the-android-client-sdk">Android SDK 下载</a></li>
+              <li><a target="_blank" href="https://developer.qiniu.com/pili/sdk/1211/ios-playback-end-the-sdk">iOS SDK 下载</a></li>
+              <li><a target="_blank" href="https://developer.qiniu.com/pili/sdk/4164/windows-player-sdk">Windows SDK 下载</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3 col-xs-4">
+            <h4>常用文档</h4>
+            <ul class="links-list">
+              <li><a target="_blank" href="https://developer.qiniu.com/pili/sdk/4262/player-sdk-introduction-and-demo-download">播放器 SDK 产品简介</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3 col-xs-4">
+            <h4>相关文档</h4>
+            <ul class="links-list">
+              <li><a target="_blank" href="https://developer.qiniu.com/pili">直播云产品手册</a></li>
+              <li><a target="_blank" href="https://developer.qiniu.com/pili/sdk/3919/a-short-video-the-white-paper">短视频白皮书</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="helper">
+      <a id="waiter" data-toggle="modal" data-target="#feedback-modal">
+        <img class="" src="../assets/icon-sevice%402x-21342418ba5b3d3a9ba87d3ef1df87fabd3a1c59a9e76a8b71df63efdbfbfef1.png" />        <span class="">服务&bull;咨询</span>
+      </a>
+      <a class="close-btn" href="javascript:;"><img src="../assets/close-c80c279cfed4ad83fa45163d69624d1cfacc5a42b9338006dd1a26e4730e5e1e.png" alt="Close" /></a>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade alert-modal-css form-wrapper" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback-modal-label" data-keyboard="false" data-backdrop="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="feedback-modal-label">产品及服务咨询</h4>
+          </div>
+          <div class="modal-body">
+            <div id="feedback-alert-success" class="alert alert-success" style="display: none;">
+              <i class="glyphicon glyphicon-ok"></i> 提交成功！
+            </div>
+            <div id="feedback-alert-error" class="alert alert-danger" style="display: none;">
+              <i class="glyphicon glyphicon-remove"></i> 提交失败，稍后重试！
+            </div>
+            <div class="tips text-center ">
+              此表单仅用于产品及服务售前咨询（您也可以拨打400-808-9176转2）<br />
+              如有售后技术咨询，请<a class="more underline" href="https://support.qiniu.com/tickets/category">提交工单</a>            </div>
+            <div class="tips text-center d-none">
+              
+            </div>
+
+            <form class="form-horizontal" id="feedback-form" action="https://www.qiniu.com/feedbacks?t=4f8e6cca-ba97-4590-a316-a9f5097d7d4e" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Ibjkx0CU+Zvpb5tRNKTTlBRYw5K0s39Caz/9JKljSxzyKHEiIWsxjI2KbYyU1J2MMq5tKQxULiuHHWIbLSL3Cw==" />
+              <input value="http://www-source.qiniu.com/products/player" type="hidden" name="feedback[referer]" id="feedback_referer" />
+              <div class="form-group">
+                <label for="feedback-content" class="col-sm-2 control-label">咨询内容<small class="text-danger">*</small></label>
+                <div class="col-sm-10">
+                  <textarea maxLength="255" class="form-control" id="feedback-content" validate="true" name="feedback[content]" cols="" rows="5">
+</textarea>
+                  <div class="div-error">
+                    <label for="" class="error-label">请填写咨询内容</label>
+                  </div>
+                  <div class="maxLength-tips">
+                    <label for="" class="maxLength-label">最多可输入255字</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-name" class="col-sm-2 control-label">姓名<small class="text-danger">*</small></label>
+                <div class="col-sm-10">
+                  <input class="form-control" id="feedback-name" validate="true" type="text" name="feedback[name]" />
+                  <div class="div-error">
+                    <label for="" class="error-label">请填写姓名</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-company" class="col-sm-2 control-label">公司名称</label>
+                <div class="col-sm-10">
+                  <input class="form-control" id="feedback-company" type="text" name="feedback[company]" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-city" class="col-sm-2 control-label">省份<small class="text-danger">*</small></label>
+                  <div class="col-sm-10" id="province_city" data-required="true">
+                    <select name="feedback[province]" id="province" class="province form-control" data-value="北京" data-required="true"></select>
+                  </div>
+
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-phone" class="col-sm-2 control-label">联系电话<small class="text-danger">*</small></label>
+                <div class="col-sm-10">
+                  <input class="form-control" id="feedback-phone" validate="true" type="tel" name="feedback[phone]" />
+                  <div class="div-error">
+                    <label for="" class="error-label">请以正确的格式填写联系电话</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-email" class="col-sm-2 control-label">电子邮箱<small class="text-danger">*</small></label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="feedback-email" validate="true" name="feedback[email]" />
+                  <div class="div-error">
+                    <label for="" class="error-label">请填写电子邮箱</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group d-none">
+                <div class="col-sm-12 text-center tips">Email our Marketing Team：Marketing@Qiniu.com</div>
+              </div>
+
+              <div class="actions">
+                <button name="button" type="submit" class="btn btn-primary" id="feedback-submit" disabled="disabled" data-disable-with="正在提交中...">提交</button>
+              </div>
+</form>          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="hidden-xs ">
+      <div class="container">
+        <div class="row ">
+          <div class="col-sm-8">
+            <div class="row grey-link">
+              <div class="col-sm-4 col-xs-4">
+                <dl>
+                  <dt>产品与服务</dt>
+                      <dd><a href="kodo.html">对象存储</a></dd>                      <dd><a href="fusion.html">融合 CDN</a></dd>                      <dd><a href="kirk.html">容器云 <small>(即将上线)</small></a></dd>                      <dd><a href="atlab.html">深度学习平台</a></dd>                      <dd><a href="pandora.html">大数据</a></dd>                      <dd><a href="dora.html">智能多媒体 API</a></dd>                      <dd><a href="pili.html">直播云</a></dd>                </dl>
+              </div>
+              <div class="col-sm-4 col-xs-4">
+                <dl>
+                  <dt>支持</dt>
+                  <dd><a target="_blank" href="https://developer.qiniu.com/">开发者中心</a></dd>
+                  <dd><a target="_blank" href="https://support.qiniu.com/">技术支持</a></dd>
+                  <dd><a target="_blank" href="https://segmentfault.com/qiniu">问答社区</a></dd>
+                  <dd><a href="../events.html">热门活动</a></dd>
+                  <dd><a id="report" href="mailto:jubao@qiniu.com">违规内容举报</a></dd>
+                  <dd><a target="_blank" href="https://support.qiniu.com/login">工单系统</a></dd>
+                  <dd><a target="blank" href="http://blog.qiniu.com/">技术博客</a></dd>
+                </dl>
+              </div>
+              <div class="col-sm-4 col-xs-4">
+                <dl>
+                  <dt>关于我们</dt>
+                  <dd><a href="../company.html">公司介绍</a></dd>
+                  <dd><a href="../news.html">新闻动态</a></dd>
+                  <dd><a href="../product_news.html">产品动态</a></dd>
+                  <dd><a href="../welfares.html">近期福利</a></dd>
+                  <dd><a target="_blank" href="https://developer.qiniu.com/brand">品牌标识</a></dd>
+                  <dd><a href="../case.html">客户案例</a></dd>
+                  <dd><a href="../cooperations.html">市场合作</a></dd>
+                  <dd><a target="_blank" href="http://career.qiniu.com/">加入我们</a></dd>
+                  <dd><a href="../contact.html">联系我们</a></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 text-center">
+            <a class="logo" href="../index.html"><img alt="七牛云" src="../assets/logo-b5caafe0363dace7b5c0a00be38a4829444918c4322a6168714522ee19dcb1c1.png" /></a>            <div class="qrcode">
+              <img src="../assets/weixin-qrcode-e4ddfa8a1a16b96c60e4b671b676dfd168ab4f91b5a700a755dde294347fc0f0.png" alt="Weixin qrcode" />            </div>
+            <div>关注七牛云公众号</div>
+            <div class="sns">
+              <a class="github" href="https://github.com/qiniu" target="_blank"></a>
+              <a class="weibo" href="http://weibo.com/qiniutek" target="_blank"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="links grey-link">
+          <div class="cloud-verify">
+            <a target="_blank" rel="noopener" href="http://www.dca.org.cn/" class="verify-logo" title="可信云"></a>
+            <a target="_blank" rel="noopener" href="#" class="iso-logo" title="iso"></a>
+          </div>
+          <ul class="">
+            <li><div class="copyright grey-color">© 2018 七牛云</div></li>
+            <li><a href="../user-agreement.html">用户协议</a></li>
+            <li><a href="../sla-kodo.html">SLA</a></li>
+            <li><a target="_blank" href="https://status.qiniu.com/">服务状态</a></li>
+          </ul>
+          <div class="copyright grey-color p-h-sm d-none">© 2011-2018 Copyright by Qiniu Cloud All rights reserved</div>
+          <div class="icp grey-color">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502000961"><span class="icon icon-aq">沪公网安备 31011502000961 号</span></a>
+            <a href="http://www.miitbeian.gov.cn/" target="_blank"><span class="icon icon-aq"> 沪 ICP 备 11037377 号-5 </span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer class="visible-xs footer-mobile ">
+      <div class="container">
+        <div class="collapse-wrapper ">
+          <ul class="panel-group" id="accordion">
+            <li class="panel panel-info">
+              <div class="panel-heading panel-sort">
+                <a class="sort-name" data-toggle="collapse" data-parent="#accordion" href="#collapseProduct">产品</a>
+              </div>
+
+              <div id="collapseProduct" class="panel-collapse collapse collapse-menu">
+                <div class="panel-body panel-menu">
+                      <div class="menu-unit"><a href="kodo.html"><h4 class="kodo">对象存储</h4></a></div>                      <div class="menu-unit"><a href="fusion.html"><h4 class="fusion">融合 CDN</h4></a></div>                      <div class="menu-unit"><a href="kirk.html"><h4 class="kirk">容器云 <small>(即将上线)</small></h4></a></div>                      <div class="menu-unit"><a href="atlab.html"><h4 class="atlab">深度学习平台</h4></a></div>                      <div class="menu-unit"><a href="pandora.html"><h4 class="pandora">大数据</h4></a></div>                      <div class="menu-unit"><a href="dora.html"><h4 class="dora">智能多媒体 API</h4></a></div>                      <div class="menu-unit"><a href="pili.html"><h4 class="pili">直播云</h4></a></div>                </div>
+              </div>
+            </li>
+            <li class="panel panel-info">
+              <div class="panel-heading panel-sort">
+                <a class="sort-name" data-toggle="collapse" data-parent="#accordion" href="#collapseSupport">支持</a>
+              </div>
+
+              <div id="collapseSupport" class="panel-collapse collapse collapse-menu">
+                <div class="panel-body panel-menu">
+                  <div class="menu-unit">
+                    <a href="https://developer.qiniu.com/" target="_blank">
+                      <h4>开发者中心</h4>
+                    </a>
+                  </div>
+                  <div class="menu-unit">
+                    <a href="https://support.qiniu.com/" target="_blank">
+                      <h4>技术支持</h4>
+                    </a>
+                  </div>
+                  <div class="menu-unit">
+                    <a href="https://segmentfault.com/qiniu" target="_blank">
+                      <h4>问答社区</h4>
+                    </a>
+                  </div>
+                  <div class="menu-unit"><a href="../events.html"><h4>热门活动</h4></a></div>                  <div class="menu-unit">
+                    <a href="mailto:jubao@qiniu.com" id="report">
+                      <h4>违规内容举报</h4>
+                    </a>
+                  </div>
+                  <div class="menu-unit">
+                    <a href="https://support.qiniu.com/login" target="_blank">
+                      <h4>工单系统</h4>
+                    </a>
+                  </div>
+                  <div class="menu-unit">
+                    <a href="http://blog.qiniu.com/" target="_blank">
+                      <h4>技术博客</h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="panel panel-info">
+              <div class="panel-heading panel-sort">
+                <a class="sort-name" data-toggle="collapse" data-parent="#accordion" href="#collapseUs">关于我们</a>
+              </div>
+              <div id="collapseUs" class="panel-collapse collapse collapse-menu">
+                <div class="panel-body panel-menu">
+                  <div class="menu-unit"><a href="../company.html"><h4>公司介绍</h4></a></div>                  <div class="menu-unit"><a href="../news.html"><h4>新闻动态</h4></a></div>                  <div class="menu-unit"><a href="../product_news.html"><h4>产品动态</h4></a></div>                  <div class="menu-unit"><a href="../welfares.html"><h4>近期福利</h4></a></div>                  <div class="menu-unit">
+                    <a href="https://developer.qiniu.com/brand" target="_blank">
+                      <h4>品牌标识</h4>
+                    </a>
+                  </div>
+                  <div class="menu-unit"><a href="../case.html"><h4>客户案例</h4></a></div>                  <div class="menu-unit"><a href="../cooperations.html"><h4>市场合作</h4></a></div>                  <div class="menu-unit">
+                    <a href="http://career.qiniu.com/" target="_blank">
+                      <h4>加入我们</h4>
+                    </a>
+                  </div>
+                  <div class="menu-unit"><a href="../contact.html"><h4>联系我们</h4></a></div>                </div>
+              </div>
+            </li>
+            <li class="panel panel-info">
+              <div class="panel-heading panel-sort">
+                <a class="sort-name" data-toggle="collapse" data-parent="#accordion" href="#collapseCare">关注我们</a>
+              </div>
+
+              <div id="collapseCare" class="panel-collapse collapse collapse-menu">
+                <div class="panel-body panel-menu">
+                  <div class="text-center">
+                    <a class="logo" href="../index.html"><img alt="七牛云" src="../assets/logo-b5caafe0363dace7b5c0a00be38a4829444918c4322a6168714522ee19dcb1c1.png" /></a>                    <div class="qrcode">
+                      <img src="../assets/weixin-qrcode-e4ddfa8a1a16b96c60e4b671b676dfd168ab4f91b5a700a755dde294347fc0f0.png" alt="Weixin qrcode" />                    </div>
+                    <div>关注七牛云公众号</div>
+                    <div class="sns">
+                      <a class="github" href="https://github.com/qiniu" target="_blank"></a>
+                      <a class="weibo" href="http://weibo.com/qiniutek" target="_blank"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="links grey-link">
+          <div class="cloud-verify">
+            <a target="_blank" rel="noopener" href="http://www.dca.org.cn/" class="verify-logo" title="可信云"></a>
+            <a target="_blank" rel="noopener" href="#" class="iso-logo" title="iso"></a>
+          </div>
+          <ul class="">
+            <li><div class="copyright grey-color">© 2018 七牛云</div></li>
+            <li><a href="../user-agreement.html">用户协议</a></li>
+            <li><a href="../sla-kodo.html">SLA</a></li>
+            <li><a target="_blank" href="https://status.qiniu.com/">服务状态</a></li>
+          </ul>
+          <div class="copyright grey-color p-h-sm d-none">© 2011-2018 Copyright by Qiniu Cloud All rights reserved</div>
+          <div class="icp grey-color">
+            <a rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502000961"><span class="icon icon-aq">沪公网安备 31011502000961 号</span></a>
+            <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow"><span class="icon icon-aq">沪 ICP 备 11037377 号-5</span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer-sign ">
+      <div class="stripe stripe-blue p-xxl visible-xs fixed-b">
+        <div class="text-center"><a href="https://portal.qiniu.com/signup" class="btn btn-lg btn-hollow around-xl hidden-xs" target="_blank">马上免费注册</a></div>
+        <div class="text-center"><a href="https://portal.qiniu.com/signup?type=1" class="btn btn-lg btn-hollow around-xl visible-xs-inline" target="_blank">马上免费注册</a></div>
+        <a class="stripe-close-btn" href="javascript:;"><img class="stripe-close-img" src="../assets/close-c80c279cfed4ad83fa45163d69624d1cfacc5a42b9338006dd1a26e4730e5e1e.png" alt="Close" /></a>
+      </div>
+    </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-40857860-16', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "../../hm.baidu.com/hm43fc.js?204fcf6777f8efa834fe7c45a2336bf1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <script src="../../mars-assets.qnssl.com/stalker.js_%3b%20filename_%3dutf-8%27%20%27stalker.js"></script>
+  </body>
+
+<!-- Mirrored from www.qiniu.com/products/player by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Apr 2018 00:57:54 GMT -->
+</html>
